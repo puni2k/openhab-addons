@@ -75,6 +75,7 @@ public class ConnectedCarDiscoveryService extends AbstractDiscoveryService imple
                     tuid = THING_TYPE_IDVEHICLE;
                     break;
                 case "ŠKODA":
+                case "Škoda":
                 case API_BRAND_SKODA_E:
                     tuid = THING_TYPE_SKODAEVEHICLE;
                     break;
