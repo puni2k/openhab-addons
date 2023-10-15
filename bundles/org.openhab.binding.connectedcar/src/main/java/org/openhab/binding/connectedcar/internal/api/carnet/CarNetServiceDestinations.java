@@ -22,6 +22,7 @@ import java.util.Map;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
 import org.eclipse.jdt.annotation.Nullable;
+import org.openhab.binding.connectedcar.internal.api.ApiBase;
 import org.openhab.binding.connectedcar.internal.api.ApiBaseService;
 import org.openhab.binding.connectedcar.internal.api.ApiException;
 import org.openhab.binding.connectedcar.internal.api.carnet.CarNetApiGSonDTO.CNDestinations.CarNetDestination;
@@ -41,7 +42,7 @@ import org.openhab.core.types.UnDefType;
  */
 @NonNullByDefault
 public class CarNetServiceDestinations extends ApiBaseService {
-    public CarNetServiceDestinations(CarNetVehicleHandler thingHandler, CarNetApi api) {
+    public CarNetServiceDestinations(CarNetVehicleHandler thingHandler, ApiBase api) {
         super(CNAPI_SERVICE_DESTINATIONS, thingHandler, api);
     }
 

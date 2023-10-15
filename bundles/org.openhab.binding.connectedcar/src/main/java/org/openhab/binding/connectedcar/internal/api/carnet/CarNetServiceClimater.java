@@ -22,6 +22,7 @@ import java.util.Map;
 import javax.measure.IncommensurableException;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
+import org.openhab.binding.connectedcar.internal.api.ApiBase;
 import org.openhab.binding.connectedcar.internal.api.ApiBaseService;
 import org.openhab.binding.connectedcar.internal.api.ApiException;
 import org.openhab.binding.connectedcar.internal.api.carnet.CarNetApiGSonDTO.CNClimater.CarNetClimaterStatus;
@@ -43,7 +44,7 @@ import org.slf4j.LoggerFactory;
 public class CarNetServiceClimater extends ApiBaseService {
     private final Logger logger = LoggerFactory.getLogger(CarNetServiceClimater.class);
 
-    public CarNetServiceClimater(CarNetVehicleHandler thingHandler, CarNetApi api) {
+    public CarNetServiceClimater(CarNetVehicleHandler thingHandler, ApiBase api) {
         super(CNAPI_SERVICE_REMOTE_PRETRIP_CLIMATISATION, thingHandler, api);
     }
 

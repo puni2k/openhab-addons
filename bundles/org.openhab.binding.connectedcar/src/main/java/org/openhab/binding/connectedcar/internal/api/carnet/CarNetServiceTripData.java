@@ -21,6 +21,7 @@ import java.util.Comparator;
 import java.util.Map;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
+import org.openhab.binding.connectedcar.internal.api.ApiBase;
 import org.openhab.binding.connectedcar.internal.api.ApiBaseService;
 import org.openhab.binding.connectedcar.internal.api.ApiException;
 import org.openhab.binding.connectedcar.internal.api.carnet.CarNetApiGSonDTO.CarNetTripData;
@@ -39,7 +40,7 @@ import org.openhab.core.library.types.DecimalType;
  */
 @NonNullByDefault
 public class CarNetServiceTripData extends ApiBaseService {
-    public CarNetServiceTripData(CarNetVehicleHandler thingHandler, CarNetApi api) {
+    public CarNetServiceTripData(CarNetVehicleHandler thingHandler, ApiBase api) {
         super(CNAPI_SERVICE_REMOTE_TRIP_STATISTICS, thingHandler, api);
     }
 

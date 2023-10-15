@@ -18,6 +18,7 @@ import static org.openhab.binding.connectedcar.internal.api.carnet.CarNetApiGSon
 import java.util.Map;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
+import org.openhab.binding.connectedcar.internal.api.ApiBase;
 import org.openhab.binding.connectedcar.internal.api.ApiBaseService;
 import org.openhab.binding.connectedcar.internal.api.ApiException;
 import org.openhab.binding.connectedcar.internal.api.carnet.CarNetApiGSonDTO.CNHeaterVentilation.CarNetHeaterVentilationStatus;
@@ -34,7 +35,7 @@ import org.openhab.binding.connectedcar.internal.util.Helpers;
  */
 @NonNullByDefault
 public class CarNetServicePreHeat extends ApiBaseService {
-    public CarNetServicePreHeat(CarNetVehicleHandler thingHandler, CarNetApi api) {
+    public CarNetServicePreHeat(CarNetVehicleHandler thingHandler, ApiBase api) {
         super(CNAPI_SERVICE_REMOTE_HEATING, thingHandler, api);
     }
 

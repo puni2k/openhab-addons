@@ -23,7 +23,6 @@ import org.eclipse.jdt.annotation.NonNullByDefault;
 import org.openhab.binding.connectedcar.internal.api.ApiDataTypesDTO.ApiActionRequest;
 import org.openhab.binding.connectedcar.internal.api.ApiErrorDTO;
 import org.openhab.binding.connectedcar.internal.api.ApiException;
-import org.openhab.binding.connectedcar.internal.api.carnet.CarNetApi;
 import org.openhab.binding.connectedcar.internal.api.carnet.CarNetApiGSonDTO.CNErrorMessage2Details;
 import org.openhab.binding.connectedcar.internal.api.carnet.CarNetServiceCarFinder;
 import org.openhab.binding.connectedcar.internal.api.carnet.CarNetServiceCharger;
@@ -211,17 +210,17 @@ public class CarNetVehicleHandler extends ThingBaseHandler {
     @Override
     public void registerServices() {
         services.clear();
-        addService(new CarNetServiceStatus(this, (CarNetApi) api));
-        addService(new CarNetServiceCarFinder(this, (CarNetApi) api));
-        addService(new CarNetServiceRLU(this, (CarNetApi) api));
-        addService(new CarNetServiceClimater(this, (CarNetApi) api));
-        addService(new CarNetServicePreHeat(this, (CarNetApi) api));
-        addService(new CarNetServiceCharger(this, (CarNetApi) api));
-        addService(new CarNetServiceTripData(this, (CarNetApi) api));
-        addService(new CarNetServiceDestinations(this, (CarNetApi) api));
-        addService(new CarNetServiceHonkFlash(this, (CarNetApi) api));
-        addService(new CarNetServiceGeoFenceAlerts(this, (CarNetApi) api));
-        addService(new CarNetServiceSpeedAlerts(this, (CarNetApi) api));
+        addService(new CarNetServiceStatus(this, api));
+        addService(new CarNetServiceCarFinder(this, api));
+        addService(new CarNetServiceRLU(this, api));
+        addService(new CarNetServiceClimater(this, api));
+        addService(new CarNetServicePreHeat(this, api));
+        addService(new CarNetServiceCharger(this, api));
+        addService(new CarNetServiceTripData(this, api));
+        addService(new CarNetServiceDestinations(this, api));
+        addService(new CarNetServiceHonkFlash(this, api));
+        addService(new CarNetServiceGeoFenceAlerts(this, api));
+        addService(new CarNetServiceSpeedAlerts(this, api));
     }
 
     @Override

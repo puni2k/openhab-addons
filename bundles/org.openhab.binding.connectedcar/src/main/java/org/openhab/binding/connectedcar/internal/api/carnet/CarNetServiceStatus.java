@@ -25,6 +25,7 @@ import javax.measure.UnconvertibleException;
 import javax.measure.Unit;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
+import org.openhab.binding.connectedcar.internal.api.ApiBase;
 import org.openhab.binding.connectedcar.internal.api.ApiBaseService;
 import org.openhab.binding.connectedcar.internal.api.ApiException;
 import org.openhab.binding.connectedcar.internal.api.carnet.CarNetApiGSonDTO.CarNetVehicleStatus;
@@ -54,7 +55,7 @@ import org.slf4j.LoggerFactory;
 public class CarNetServiceStatus extends ApiBaseService {
     private final Logger logger = LoggerFactory.getLogger(CarNetServiceStatus.class);
 
-    public CarNetServiceStatus(CarNetVehicleHandler thingHandler, CarNetApi api) {
+    public CarNetServiceStatus(CarNetVehicleHandler thingHandler, ApiBase api) {
         super(CNAPI_SERVICE_VEHICLE_STATUS_REPORT, thingHandler, api);
     }
 

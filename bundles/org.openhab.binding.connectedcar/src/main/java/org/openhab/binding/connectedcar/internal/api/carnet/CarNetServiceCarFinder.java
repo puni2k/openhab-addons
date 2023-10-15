@@ -20,6 +20,7 @@ import java.util.Map;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
 import org.eclipse.jetty.http.HttpStatus;
+import org.openhab.binding.connectedcar.internal.api.ApiBase;
 import org.openhab.binding.connectedcar.internal.api.ApiBaseService;
 import org.openhab.binding.connectedcar.internal.api.ApiDataTypesDTO.GeoPosition;
 import org.openhab.binding.connectedcar.internal.api.ApiException;
@@ -42,7 +43,7 @@ import org.slf4j.LoggerFactory;
 public class CarNetServiceCarFinder extends ApiBaseService {
     private final Logger logger = LoggerFactory.getLogger(CarNetServiceCarFinder.class);
 
-    public CarNetServiceCarFinder(CarNetVehicleHandler thingHandler, CarNetApi api) {
+    public CarNetServiceCarFinder(CarNetVehicleHandler thingHandler, ApiBase api) {
         super(CNAPI_SERVICE_CAR_FINDER, thingHandler, api);
     }
 

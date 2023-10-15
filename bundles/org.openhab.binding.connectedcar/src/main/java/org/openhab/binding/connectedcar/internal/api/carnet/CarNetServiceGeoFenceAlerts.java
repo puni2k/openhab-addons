@@ -21,6 +21,7 @@ import java.util.Comparator;
 import java.util.Map;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
+import org.openhab.binding.connectedcar.internal.api.ApiBase;
 import org.openhab.binding.connectedcar.internal.api.ApiBaseService;
 import org.openhab.binding.connectedcar.internal.api.ApiException;
 import org.openhab.binding.connectedcar.internal.api.carnet.CarNetApiGSonDTO.CNGeoFenceAlerts.CarNetGeoFenceAlerts;
@@ -37,7 +38,7 @@ import org.openhab.binding.connectedcar.internal.provider.ChannelDefinitions.Cha
  */
 @NonNullByDefault
 public class CarNetServiceGeoFenceAlerts extends ApiBaseService {
-    public CarNetServiceGeoFenceAlerts(CarNetVehicleHandler thingHandler, CarNetApi api) {
+    public CarNetServiceGeoFenceAlerts(CarNetVehicleHandler thingHandler, ApiBase api) {
         super(CNAPI_SERVICE_GEOFENCING, thingHandler, api);
     }
 
