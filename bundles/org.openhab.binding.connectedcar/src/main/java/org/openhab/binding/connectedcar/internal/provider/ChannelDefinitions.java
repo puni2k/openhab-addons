@@ -504,7 +504,7 @@ public class ChannelDefinitions {
         add("", "", CHANNEL_CHARGER_STATUS, ITEMT_STRING, group);
         add("", "", CHANNEL_CHARGER_MAXCURRENT, ITEMT_AMP, group, Units.AMPERE, false, false);
         add("", "", CHANNEL_CHARGER_REMAINING, ITEMT_TIME, group, Units.MINUTE);
-        add("", "", CHANNEL_CHARGER_POWER, ITEMT_VOLT, group);
+        add("", "", CHANNEL_CHARGER_POWER, ITEMT_ENERGY, group);
         add("", "", CHANNEL_CHARGER_PWR_STATE, ITEMT_STRING, group);
         add("", "", CHANNEL_CHARGER_RATE, ITEMT_NUMBER, group);
         add("", "", CHANNEL_CHARGER_CHGLVL, ITEMT_PERCENT, group);
